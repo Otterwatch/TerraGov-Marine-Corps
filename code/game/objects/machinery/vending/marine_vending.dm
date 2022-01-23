@@ -122,6 +122,7 @@
 			/obj/item/attachable/suppressor = -1,
 			/obj/item/attachable/heavy_barrel = -1,
 			/obj/item/attachable/lace = -1,
+			/obj/item/weapon/gun/rifle/autoinjector/autoinjector_stinger
 			/obj/item/attachable/flashlight = -1,
 			/obj/item/attachable/magnetic_harness = -1,
 			/obj/item/attachable/reddot = -1,
