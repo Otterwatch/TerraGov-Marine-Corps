@@ -736,6 +736,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	desc = "A weapon-mounted instant injection, autoinjector holding 2 loads. Loadable with any vended autoinjector. It's a lot more effective than taking them out of your pack, but now you can't bayonet charge the enemy."
 	icon = 'icons/Marine/marine-weapons.dmi'
 	icon_state = "autoinjectsting"
+	item_state = "autoinjectsting"
 	max_shells = 4 //codex
 	max_chamber_items = 1
 	load_method = SINGLE_CASING //codex
