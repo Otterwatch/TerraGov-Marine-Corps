@@ -782,6 +782,10 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 		to_chat(gun_user, span_warning("[src] beeps a warning noise. You have to get closer!"))
 		return FALSE
 
+/obj/item/weapon/gun/autoinjector/do_fire(obj/object_to_fire)
+	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
+		return TRUE
+
 /obj/item/reagent_containers/hypospray/autoinjector/autoinjector_stinger/interact(mob/user)
 	. = ..()
 	if(.)
