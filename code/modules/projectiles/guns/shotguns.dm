@@ -686,7 +686,7 @@
 
 /obj/item/weapon/gun/shotgun/autoinjector_stinger
     name = "Autoinjector Stinger"
-	desc = "A weapon-mounted instant injection, autoinjector holding 2 loads. Loadable with any vended autoinjector. It's a lot more effective than taking them out of your pack but now you can't bayonet charge the enemy.."
+	desc = "A weapon-mounted instant injection, autoinjector holding 2 loads. Loadable with any vended autoinjector. It's a lot more effective than taking them out of your pack, but now you can't bayonet charge the enemy."
 	icon = 'icons/Marine/marine-weapons.dmi'
 	icon_state = "autoinjectsting"
 	max_chamber_items = 2
