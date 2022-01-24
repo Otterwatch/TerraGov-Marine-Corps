@@ -738,6 +738,8 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	icon_state = "autoinjectsting"
 	max_shells = 3 //codex
 	max_chamber_items = 1
+	caliber = CALIBER_INJECTOR //codex
+	load_method = SINGLE_CASING //codex
 	fire_delay = 1 SECONDS
 	gun_skill_category = NONE
 	reciever_flags = NONE
@@ -773,7 +775,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 		/obj/item/reagent_containers/hypospray/autoinjector/medicalnanites,
 	)
 
-/obj/item/weapon/gun/autoinjector/autoinjector_stinger/able_to_fire(mob/user)
+/obj/item/weapon/gun/autoinjector/able_to_fire(mob/user)
 	. = ..()
 	if(!.)
 		return FALSE
@@ -781,7 +783,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 		to_chat(gun_user, span_warning("[src] beeps a warning noise. You have to get closer!"))
 		return FALSE
 
-	/obj/item/weapon/gun/autoinjector/autoinjector_stinger/do_fire(obj/object_to_fire)
+	/obj/item/weapon/gun/autoinjector/do_fire(obj/object_to_fire)
 	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
 		return FALSE
 	var/obj/item/reagent_containers/hypospray/autoinjector/injection = object_to_fire
