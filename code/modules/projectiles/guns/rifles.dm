@@ -137,7 +137,7 @@
 		/obj/item/attachable/buildasentry,
 		/obj/item/weapon/gun/rifle/pepperball/pepperball_mini,
 		/obj/item/attachable/shoulder_mount,
-		/obj/item/weapon/gun/shotgun/autoinjector_stinger,
+		/obj/item/weapon/gun/autoinjector/autoinjector_stinger,
 	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
