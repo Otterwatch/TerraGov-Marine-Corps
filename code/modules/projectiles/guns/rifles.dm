@@ -1387,7 +1387,5 @@
 	scatter = 2
 	wield_delay = 0.5 SECONDS
 
-//-------------------------------------------------------
-// Autoinjector Stinger
 
 
