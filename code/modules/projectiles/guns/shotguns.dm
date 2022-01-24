@@ -721,4 +721,4 @@
 		/obj/item/reagent_containers/hypospray/autoinjector/isotonic,
 		/obj/item/reagent_containers/hypospray/autoinjector/medicalnanites,
 	)
-	shotgun_max_range = 1
+
