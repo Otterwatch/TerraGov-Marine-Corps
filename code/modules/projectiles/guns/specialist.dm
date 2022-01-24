@@ -733,11 +733,11 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 
 /obj/item/weapon/gun/autoinjector/autoinjector_stinger
 	name = "Autoinjector Stinger"
-	desc = "A weapon-mounted instant injection, autoinjector holding 2 loads. Loadable with any vended autoinjector. It's a lot more effective than taking them out of your pack, but now you can't bayonet charge the enemy."
+	desc = "A weapon-mounted instant injection, autoinjector holding 3 loads. Loadable with any vended autoinjector. It's a lot more effective than taking them out of your pack, but now you can't bayonet charge the enemy."
 	icon = 'icons/Marine/marine-weapons.dmi'
 	icon_state = "autoinjectsting"
 	item_state = "autoinjectsting"
-	max_shells = 4 //codex
+	max_chamber_items = 3 //codex
 	load_method = SINGLE_CASING //codex
 	fire_delay = 0.75 SECONDS
 	gun_skill_category = NONE
@@ -787,17 +787,5 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 /obj/item/weapon/gun/autoinjector/do_fire(obj/object_to_fire)
 	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
 		return FALSE
+	injector.activate(gun_user)
 
-/obj/item/reagent_containers/hypospray/autoinjector/autoinjector_stinger/interact(mob/user)
-	. = ..()
-	if(.)
-		return
-
-	if(!length(possible_transfer_amounts))
-		return
-
-	var/N = tgui_input_list(user, "Amount per transfer from this:", "[src]", possible_transfer_amounts)
-	if(!N)
-		return
-
-	amount_per_transfer_from_this = N
