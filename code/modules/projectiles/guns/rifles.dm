@@ -1390,43 +1390,4 @@
 //-------------------------------------------------------
 // Autoinjector Stinger
 
-/obj/item/weapon/gun/rifle/autoinjector_stinger
-    name = "Autoinjector Stinger"
-	desc = "A weapon-mounted instant injection, autoinjector holding 2 loads. Loadable with any vended autoinjector. It's a lot more effective than taking them out of your pack but now you can't bayonet charge the enemy.."
-	icon = 'icons/Marine/marine-weapons.dmi'
-	icon_state = "autoinjectsting"
-	max_chamber_items = 2
-	attachable_allowed = list()
-	starting_attachment_types = list()
-	slot = ATTACHMENT_SLOT_MUZZLE
-	attach_delay = 3 SECONDS
-	detach_delay = 3 SECONDS
-	flags_gun_features = GUN_IS_ATTACHMENT|GUN_AMMO_COUNTER|GUN_ATTACHMENT_FIRE_ONLY|GUN_WIELDED_STABLE_FIRING_ONLY|GUN_WIELDED_FIRING_ONLY
-	default_ammo_type = /obj/item/reagent_containers/hypospray/autoinjector/combat
-	allowed_ammo_types = list(
-		/obj/item/reagent_containers/hypospray/autoinjector/tricordrazine,
-		/obj/item/reagent_containers/hypospray/autoinjector/combat,
-		/obj/item/reagent_containers/hypospray/autoinjector/combat_advanced,
-		/obj/item/reagent_containers/hypospray/autoinjector/quickclot,
-		/obj/item/reagent_containers/hypospray/autoinjector/quickclotplus,
-		/obj/item/reagent_containers/hypospray/autoinjector/dexalinplus,
-		/obj/item/reagent_containers/hypospray/autoinjector/sleeptoxin,
-		/obj/item/reagent_containers/hypospray/autoinjector/dylovene,
-		/obj/item/reagent_containers/hypospray/autoinjector/tramadol,
-		/obj/item/reagent_containers/hypospray/autoinjector/oxycodone,
-		/obj/item/reagent_containers/hypospray/autoinjector/kelotane,
-		/obj/item/reagent_containers/hypospray/autoinjector/bicaridine,
-		/obj/item/reagent_containers/hypospray/autoinjector/inaprovaline,
-		/obj/item/reagent_containers/hypospray/autoinjector/hypervene,
-		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine,
-		/obj/item/reagent_containers/hypospray/autoinjector/synaptizine_expired,
-		/obj/item/reagent_containers/hypospray/autoinjector/neuraline,
-		/obj/item/reagent_containers/hypospray/autoinjector/peridaxon_plus,
-		/obj/item/reagent_containers/hypospray/autoinjector/russian_red,
-		/obj/item/reagent_containers/hypospray/autoinjector/polyhexanide,
-		/obj/item/reagent_containers/hypospray/autoinjector/isotonic,
-		/obj/item/reagent_containers/hypospray/autoinjector/medicalnanites,
-	)
-	rifle_max_range = 1
-
 
