@@ -773,6 +773,8 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 		/obj/item/reagent_containers/hypospray/autoinjector/isotonic,
 		/obj/item/reagent_containers/hypospray/autoinjector/medicalnanites,
 	)
+	pixel_shift_x = 14
+	pixel_shift_y = 18
 
 /obj/item/weapon/gun/autoinjector/able_to_fire(mob/user)
 	. = ..()
