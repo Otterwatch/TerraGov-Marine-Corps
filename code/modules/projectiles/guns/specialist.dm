@@ -782,3 +782,16 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 		to_chat(gun_user, span_warning("[src] beeps a warning noise. You have to get closer!"))
 		return FALSE
 
+/obj/item/reagent_containers/hypospray/autoinjector/autoinjector_stinger/interact(mob/user)
+	. = ..()
+	if(.)
+		return
+
+	if(!length(possible_transfer_amounts))
+		return
+
+	var/N = tgui_input_list(user, "Amount per transfer from this:", "[src]", possible_transfer_amounts)
+	if(!N)
+		return
+
+	amount_per_transfer_from_this = N
