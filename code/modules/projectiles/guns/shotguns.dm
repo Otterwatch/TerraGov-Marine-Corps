@@ -696,7 +696,7 @@
 	attach_delay = 3 SECONDS
 	detach_delay = 3 SECONDS
 	flags_gun_features = GUN_IS_ATTACHMENT|GUN_AMMO_COUNTER|GUN_ATTACHMENT_FIRE_ONLY|GUN_WIELDED_STABLE_FIRING_ONLY|GUN_WIELDED_FIRING_ONLY
-	default_ammo_type = /obj/item/reagent_containers/hypospray/autoinjector/combat
+	default_ammo_type = /obj/item/reagent_containers/hypospray/autoinjector/combat/var/flags_magazine
 	allowed_ammo_types = list(
 		/obj/item/reagent_containers/hypospray/autoinjector/tricordrazine,
 		/obj/item/reagent_containers/hypospray/autoinjector/combat,
