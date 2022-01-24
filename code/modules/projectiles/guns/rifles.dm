@@ -1390,7 +1390,7 @@
 //-------------------------------------------------------
 // Autoinjector Stinger
 
-/obj/item/weapon/gun/rifle/autoinjector/autoinjector_stinger
+/obj/item/weapon/gun/rifle/autoinjector_stinger
     name = "Autoinjector Stinger"
 	desc = "A weapon-mounted instant injection, autoinjector holding 2 loads. Loadable with any vended autoinjector. It's a lot more effective than taking them out of your pack but now you can't bayonet charge the enemy.."
 	icon = 'icons/Marine/marine-weapons.dmi'
