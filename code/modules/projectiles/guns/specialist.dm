@@ -738,7 +738,6 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	icon_state = "autoinjectsting"
 	item_state = "autoinjectsting"
 	max_shells = 4 //codex
-	max_chamber_items = 1
 	load_method = SINGLE_CASING //codex
 	fire_delay = 0.75 SECONDS
 	gun_skill_category = NONE
