@@ -784,12 +784,12 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	/obj/item/weapon/gun/autoinjector/autoinjector_stinger/do_fire(obj/object_to_fire)
 	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
 		return FALSE
-	var/obj/item/reagent_containers/hypospray/autoinjector/injecter = object_to_fire
-	injecter.launched = TRUE
-	injecter.activate(gun_user)
+	var/obj/item/reagent_containers/hypospray/autoinjector/injection = object_to_fire
+	var/injection.launched = TRUE
+	var/injection.activate(gun_user)
 
 	/obj/item/weapon/gun/autoinjector/autoinjector_stinger/get_ammo_list()
 	if(!in_chamber)
 		return ..()
-	var/obj/item/autoinjector/autoinjector_stinger/grenade = in_chamber
-	return list(grenade.hud_state, grenade.hud_state_empty)
+	var/obj/item/autoinjector/autoinjector_stinger/injecter = in_chamber
+	return list(var/injector.hud_state, var/injector.hud_state_empty)
