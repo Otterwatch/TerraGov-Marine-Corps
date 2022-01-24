@@ -772,6 +772,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 		/obj/item/reagent_containers/hypospray/autoinjector/isotonic,
 		/obj/item/reagent_containers/hypospray/autoinjector/medicalnanites,
 	)
+
 /obj/item/weapon/gun/autoinjector/autoinjector_stinger/able_to_fire(mob/user)
 	. = ..()
 	if(!.)
@@ -779,15 +780,16 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	if(get_dist(target, gun_user) >= 1)
 		to_chat(gun_user, span_warning("[src] beeps a warning noise. You have to get closer!"))
 		return FALSE
+
 	/obj/item/weapon/gun/autoinjector/autoinjector_stinger/do_fire(obj/object_to_fire)
 	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
 		return FALSE
-	var/obj/item/reagent_containers/hypospray/autoinjector/injection = object_to_fire
-	injection.launched = TRUE
-	injection.activate(gun_user)
+	var/obj/item/reagent_containers/hypospray/autoinjector/injecter = object_to_fire
+	injecter.launched = TRUE
+	injecter.activate(gun_user)
 
 	/obj/item/weapon/gun/autoinjector/autoinjector_stinger/get_ammo_list()
 	if(!in_chamber)
 		return ..()
-	var/obj/item/autoinjector/autoinjector_stinger/injector = in_chamber
-	return list(injector.hud_state, injector.hud_state_empty)
+	var/obj/item/autoinjector/autoinjector_stinger/grenade = in_chamber
+	return list(grenade.hud_state, grenade.hud_state_empty)
