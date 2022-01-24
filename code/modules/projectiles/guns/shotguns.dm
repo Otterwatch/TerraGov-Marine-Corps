@@ -695,7 +695,7 @@
 	slot = ATTACHMENT_SLOT_MUZZLE
 	attach_delay = 3 SECONDS
 	detach_delay = 3 SECONDS
-	flags_gun_features = GUN_IS_ATTACHMENT|GUN_AMMO_COUNTER|GUN_ATTACHMENT_FIRE_ONLY|GUN_WIELDED_STABLE_FIRING_ONLY|GUN_WIELDED_FIRING_ONLY
+	flags_gun_features = GUN_IS_ATTACHMENT|GUN_AMMO_COUNTER|GUN_ATTACHMENT_FIRE_ONLY|GUN_WIELDED_STABLE_FIRING_ONLY|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
 	default_ammo_type = /obj/item/reagent_containers/hypospray/autoinjector/combat
 	allowed_ammo_types = list(
 		/obj/item/reagent_containers/hypospray/autoinjector/tricordrazine,
