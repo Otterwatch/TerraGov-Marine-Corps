@@ -787,5 +787,5 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 /obj/item/weapon/gun/autoinjector/do_fire(obj/object_to_fire)
 	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
 		return FALSE
-	object_to_fire.activate(gun_user)
+
 
