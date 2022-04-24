@@ -737,8 +737,9 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	icon = 'icons/Marine/marine-weapons.dmi'
 	icon_state = "autoinjectsting"
 	item_state = "autoinjectsting"
-	var/hud_state = "autoinjectsting"
-	var/hud_state_empty = "autoinjectsting_e"
+	hud_state = 'icons/mob/ammoHUD.dmi'
+	var/hud_state = "autoinjecter"
+	var/hud_state_empty = "autoinjecter_empty"
 	var/launched = FALSE
 	var/max_range = 7
 	max_chamber_items = 3 //codex
@@ -807,7 +808,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 /obj/item/weapon/gun/autoinjector/autoinjector_stinger/get_ammo_list()
 	if(!in_chamber)
 		return ..()
-	var//obj/item/weapon/gun/autoinjector/autoinjector_stinger/autoinjector = in_chamber
+	var/obj/item/weapon/gun/autoinjector/autoinjector_stinger/autoinjector = in_chamber
 	return list(autoinjector.hud_state, autoinjector.hud_state_empty)
 
 
