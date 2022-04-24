@@ -737,13 +737,13 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	icon = 'icons/Marine/marine-weapons.dmi'
 	icon_state = "autoinjectsting"
 	item_state = "autoinjectsting"
-	var/autoinjector/hud_state = "autoinjectsting"
-	var/autoinjector/hud_state_empty = "autoinjectsting_e"
+	var/hud_state = "autoinjectsting"
+	var/hud_state_empty = "autoinjectsting_e"
 	var/launched = FALSE
+	var/max_range = 7
 	max_chamber_items = 3 //codex
 	load_method = SINGLE_CASING //codex
 	fire_delay = 0.75 SECONDS
-	throw_range = 7
 	gun_skill_category = NONE
 	reciever_flags = NONE
 	attachable_allowed = list()
