@@ -737,7 +737,6 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	icon = 'icons/Marine/marine-weapons.dmi'
 	icon_state = "autoinjectsting"
 	item_state = "autoinjectsting"
-	hud_state = 'icons/mob/ammoHUD.dmi'
 	var/hud_state = "autoinjecter"
 	var/hud_state_empty = "autoinjecter_empty"
 	var/launched = FALSE
