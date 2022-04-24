@@ -787,7 +787,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 /obj/item/weapon/gun/autoinjector/do_fire(obj/object_to_fire)
 	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
 		return FALSE
-	var//obj/item/reagent_containers/hypospray/autoinjector/autoinjector_to_launch = object_to_fire
+	var/obj/item/reagent_containers/hypospray/autoinjector/autoinjector_to_launch = object_to_fire
 	var/turf/user_turf = get_turf(src)
 	autoinjector_to_launch.forceMove(user_turf)
 	gun_user?.visible_message(span_danger("[gun_user] fired an autoinjector!"), span_warning("You fire [src]!"))
