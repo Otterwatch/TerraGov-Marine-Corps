@@ -799,7 +799,6 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	log_combat(gun_user, src, "fired an autoinjector ([autoinjector_to_launch]) from [src]")
 	play_fire_sound(loc)
 	autoinjector_to_launch.launched = TRUE
-	autoinjector_to_launch.throw_at(target, max_range, 3, (gun_user ? gun_user : loc))
 	if(fire_animation)
 		flick("[fire_animation]", src)
 	return TRUE
