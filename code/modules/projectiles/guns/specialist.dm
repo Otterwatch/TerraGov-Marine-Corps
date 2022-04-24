@@ -737,9 +737,13 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	icon = 'icons/Marine/marine-weapons.dmi'
 	icon_state = "autoinjectsting"
 	item_state = "autoinjectsting"
+	var/hud_state = "autoinjectsting"
+	var/hud_state_empty = "autoinjectsting_e"
+	var/launched = FALSE
 	max_chamber_items = 3 //codex
 	load_method = SINGLE_CASING //codex
 	fire_delay = 0.75 SECONDS
+	throw_range = 7
 	gun_skill_category = NONE
 	reciever_flags = NONE
 	attachable_allowed = list()
@@ -794,10 +798,7 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 	log_explosion("[key_name(gun_user)] fired an autoinjector ([autoinjector_to_launch]) from [src] at [AREACOORD(user_turf)].")
 	log_combat(gun_user, src, "fired an autoinjector ([autoinjector_to_launch]) from [src]")
 	play_fire_sound(loc)
-	autoinjector_to_launch.det_time = min(10, autoinjector_to_launch.det_time)
 	autoinjector_to_launch.launched = TRUE
-	autoinjector_to_launch.activate(gun_user)
-	autoinjector_to_launch.throwforce += autoinjector_to_launch.launchforce
 	autoinjector_to_launch.throw_at(target, max_range, 3, (gun_user ? gun_user : loc))
 	if(fire_animation)
 		flick("[fire_animation]", src)
