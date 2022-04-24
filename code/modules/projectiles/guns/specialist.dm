@@ -787,18 +787,18 @@ Note that this means that snipers will have a slowdown of 3, due to the scope
 /obj/item/weapon/gun/autoinjector/do_fire(obj/object_to_fire)
 	if(!istype(object_to_fire, /obj/item/reagent_containers/hypospray/autoinjector))
 		return FALSE
-	var//obj/item/reagent_containers/hypospray/autoinjector/injector_to_launch = object_to_fire
+	var//obj/item/reagent_containers/hypospray/autoinjector/autoinjector_to_launch = object_to_fire
 	var/turf/user_turf = get_turf(src)
-	injector_to_launch.forceMove(user_turf)
+	autoinjector_to_launch.forceMove(user_turf)
 	gun_user?.visible_message(span_danger("[gun_user] fired an autoinjector!"), span_warning("You fire [src]!"))
-	log_explosion("[key_name(gun_user)] fired an autoinjector ([injector_to_launch]) from [src] at [AREACOORD(user_turf)].")
-	log_combat(gun_user, src, "fired an autoinjector ([injector_to_launch]) from [src]")
+	log_explosion("[key_name(gun_user)] fired an autoinjector ([autoinjector_to_launch]) from [src] at [AREACOORD(user_turf)].")
+	log_combat(gun_user, src, "fired an autoinjector ([autoinjector_to_launch]) from [src]")
 	play_fire_sound(loc)
-	injector_to_launch.det_time = min(10, injector_to_launch.det_time)
-	injector_to_launch.launched = TRUE
-	injector_to_launch.activate(gun_user)
-	injector_to_launch.throwforce += injector_to_launch.launchforce
-	injector_to_launch.throw_at(target, max_range, 3, (gun_user ? gun_user : loc))
+	autoinjector_to_launch.det_time = min(10, autoinjector_to_launch.det_time)
+	autoinjector_to_launch.launched = TRUE
+	autoinjector_to_launch.activate(gun_user)
+	autoinjector_to_launch.throwforce += autoinjector_to_launch.launchforce
+	autoinjector_to_launch.throw_at(target, max_range, 3, (gun_user ? gun_user : loc))
 	if(fire_animation)
 		flick("[fire_animation]", src)
 	return TRUE
